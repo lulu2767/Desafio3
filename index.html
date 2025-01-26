@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <script src="main.js" defer></script>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Password generator app</title>
+  </head>
+  <body>
+    <header class="main__header">
+      <h1>Password Generator</h1>
+    </header>
+    <div class="generated-password-field">
+      <input
+        type="text"
+        id="password"
+        class="inactive xxl"
+        placeholder="PTx1f5DaFX"
+        disabled
+      />
+      <div class="btn-group">
+        <p class="alert">COPIED!</p>
+        <div class="button-container">
+          <button type="button" class="copy-btn">
+            <svg width="21" height="24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                class="copy-button"
+                id="copy-button"
+                d="M20.341 3.091 17.909.659A2.25 2.25 0 0 0 16.319 0H8.25A2.25 2.25 0 0 0 6 2.25V4.5H2.25A2.25 2.25 0 0 0 0 6.75v15A2.25 2.25 0 0 0 2.25 24h10.5A2.25 2.25 0 0 0 15 21.75V19.5h3.75A2.25 2.25 0 0 0 21 17.25V4.682a2.25 2.25 0 0 0-.659-1.591ZM12.469 21.75H2.53a.281.281 0 0 1-.281-.281V7.03a.281.281 0 0 1 .281-.281H6v10.5a2.25 2.25 0 0 0 2.25 2.25h4.5v1.969a.282.282 0 0 1-.281.281Zm6-4.5H8.53a.281.281 0 0 1-.281-.281V2.53a.281.281 0 0 1 .281-.281H13.5v4.125c0 .621.504 1.125 1.125 1.125h4.125v9.469a.282.282 0 0 1-.281.281Zm.281-12h-3v-3h.451c.075 0 .147.03.2.082L18.667 4.6a.283.283 0 0 1 .082.199v.451Z"
+                fill="#A4FFAF"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="field__choices">
+      <form novalidate id="form">
+        <div class="character__length">
+          <p>Character Length</p>
+          <p id="character-range" class="green-color font-size">10</p>
+        </div>
+        <div class="slider__container">
+          <input
+            type="range"
+            name="password-strength"
+            min="0"
+            max="20"
+            value="0"
+            id="character-length"
+            class="custom-slider"
+          />
+        </div>
+        <div class="checkboxes">
+          <label for="uppercase" class="checkbox">
+            <input
+              type="checkbox"
+              id="uppercase"
+              name="uppercase"
+              class="custom-checkbox"
+            />
+            <div class="checkbox__box">
+              <img src="/assets/images/icon-check.svg" alt="Checkmark" />
+            </div>
+            Include Uppercase Letters
+          </label>
+          <label for="lowercase" class="checkbox">
+            <input
+              type="checkbox"
+              name="lowercase"
+              id="lowercase"
+              class="custom-checkbox"
+            />
+            <div class="checkbox__box">
+              <img src="/assets/images/icon-check.svg" alt="Checkmark" />
+            </div>
+            Include Lowercase Letters
+          </label>
+          <label for="numbers" class="checkbox">
+            <input
+              type="checkbox"
+              id="numbers"
+              name="numbers"
+              class="custom-checkbox"
+            />
+            <div class="checkbox__box">
+              <img src="/assets/images/icon-check.svg" alt="Checkmark" />
+            </div>
+            Include Numbers
+          </label>
+          <label for="symbols" class="checkbox">
+            <input
+              type="checkbox"
+              id="symbols"
+              name="symbols"
+              class="custom-checkbox"
+            />
+            <div class="checkbox__box">
+              <img src="/assets/images/icon-check.svg" alt="Checkmark" />
+            </div>
+            Include Symbols
+          </label>
+        </div>
+        <div class="password__strength">
+          <h2>Strength</h2>
+          <div class="strength">
+            <p id="password-strength" class="xl"></p>
+            <div class="bars" id="password-strength-indicator"></div>
+          </div>
+        </div>
+        <div class="submit__button">
+          <button type="submit" class="btn" id="submitForm">
+            Generate
+            <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg">
+              <path
+                fill="#24232C"
+                d="m5.106 12 6-6-6-6-1.265 1.265 3.841 3.84H.001v1.79h7.681l-3.841 3.84z"
+                class="arrow"
+              />
+            </svg>
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
